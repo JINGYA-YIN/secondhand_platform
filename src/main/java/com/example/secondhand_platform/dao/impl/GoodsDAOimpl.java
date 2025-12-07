@@ -172,4 +172,34 @@ public class GoodsDAOimpl implements GoodsDAO {
         }
         return goodsList;
     }
+    @Override
+    public List<Goods> findAllOnSale() {
+        String sql = "SELECT * FROM goods WHERE status=1"; // 仅查询在售商品
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        List<Goods> goodsList = new ArrayList<>();
+        try {
+            conn = DBUtil.getConn();
+            ps = conn.prepareStatement(sql);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                Goods goods = new Goods();
+                goods.setId(rs.getInt("id"));
+                goods.setUserId(rs.getInt("user_id"));
+                goods.setGoodsName(rs.getString("goods_name"));
+                goods.setGoodsType(rs.getString("goods_type"));
+                goods.setPrice(rs.getBigDecimal("price"));
+                goods.setDescription(rs.getString("description"));
+                goods.setStatus(rs.getInt("status"));
+                goods.setCreateTime(rs.getDate("create_time"));
+                goodsList.add(goods);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            DBUtil.close(conn, ps, rs);
+        }
+        return goodsList;
+    }
 }

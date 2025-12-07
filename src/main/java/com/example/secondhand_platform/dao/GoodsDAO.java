@@ -16,4 +16,5 @@ public interface GoodsDAO {
     Goods findById(Integer id);
     // 查用户所有商品
     List<Goods> findByUserId(Integer userId);
+    List<Goods> findAllOnSale();
 }

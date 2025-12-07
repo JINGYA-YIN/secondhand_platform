@@ -7,7 +7,6 @@
 </head>
 <body>
 <div class="container">
-    <!-- 头部：登录/注册/我的商品 -->
     <div class="header">
         <c:choose>
             <c:when test="${empty sessionScope.loginUser}">
@@ -23,13 +22,22 @@
         </c:choose>
     </div>
 
-    <!-- 搜索框 -->
-    <div style="text-align: center; margin: 50px 0;">
+    <div class="search-area">
         <h2>二手物品交易平台</h2>
-        <form action="${pageContext.request.contextPath}/goods/search" method="get" style="margin-top: 30px;">
-            <input type="text" name="keyword" placeholder="输入商品名称搜索..." style="width: 300px; height: 38px;">
+        <form action="${pageContext.request.contextPath}/goods/search" method="get">
+            <input type="text" name="keyword" placeholder="输入商品名称搜索...">
             <button type="submit" class="btn">搜索</button>
         </form>
+    </div>
+
+    <div class="iframe-container">
+        <iframe
+                src="${pageContext.request.contextPath}/index?target=goods_list"
+                width="100%"
+                height="500px"
+                frameborder="0"
+                scrolling="auto">
+        </iframe>
     </div>
 </div>
 </body>

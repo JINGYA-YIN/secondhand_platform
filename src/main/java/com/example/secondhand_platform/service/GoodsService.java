@@ -46,4 +46,7 @@ public class GoodsService {
     public Goods findById(Integer id) {
         return goodsDAO.findById(id);
     }
+    public List<Goods> getAllOnSaleGoods() {
+        return goodsDAO.findAllOnSale();
+    }
 }

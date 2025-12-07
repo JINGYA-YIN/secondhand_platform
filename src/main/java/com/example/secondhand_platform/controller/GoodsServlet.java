@@ -173,4 +173,5 @@ public class GoodsServlet extends HttpServlet {
         req.setAttribute("myGoodsList", myGoodsList);
         req.getRequestDispatcher("/view/myGoods.jsp").forward(req, resp);
     }
+
 }
