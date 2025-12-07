@@ -1,0 +1,120 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "微软雅黑", sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+}
+
+/* 容器样式 */
+.container {
+    width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* 头部样式 */
+.header {
+    text-align: right;
+    margin-bottom: 20px;
+}
+.header a {
+    margin: 0 8px;
+    text-decoration: none;
+    color: #333;
+}
+.header a:hover {
+    color: #0066cc;
+}
+
+/* 标题样式 */
+h3 {
+    color: #333;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* 表单样式 */
+.form-item {
+    margin: 15px 0;
+}
+.form-item label {
+    display: inline-block;
+    width: 120px;
+    text-align: right;
+    margin-right: 10px;
+}
+.form-item input, .form-item select, .form-item textarea {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 250px;
+}
+.form-item textarea {
+    height: 100px;
+    resize: none;
+}
+.form-item .error {
+    color: #ff4d4f;
+    margin-left: 130px;
+    font-size: 12px;
+}
+
+/* 按钮样式 */
+.btn {
+    padding: 8px 20px;
+    background-color: #0066cc;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: #0052aa;
+}
+
+/* 表格样式 */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+.table th, .table td {
+    padding: 12px;
+    border: 1px solid #eee;
+    text-align: center;
+}
+.table th {
+    background-color: #f5f7fa;
+    color: #333;
+}
+.table tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* 状态标签样式 */
+.status-sale {
+    color: #52c41a;
+}
+.status-sold {
+    color: #8c8c8c;
+}
+.status-off {
+    color: #ff4d4f;
+}
+
+/* 空数据提示 */
+.empty {
+    color: #8c8c8c;
+    text-align: center;
+    padding: 30px;
+}
+
